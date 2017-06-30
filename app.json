@@ -1,12 +1,47 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/search/index",
+    "pages/picture/index",
+
+    "pages/self/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "拍一下",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/search/index",
+        "iconPath": "image/search_0.png",
+        "selectedIconPath":"image/search_1.png",
+        "text": "找一找"
+      },
+      {
+        "pagePath": "pages/picture/index",
+        "iconPath": "image/favor_0.png",
+        "selectedIconPath":"image/favor_1.png",
+        "text": "拍一拍"
+      },
+      {
+        "pagePath": "pages/self/index",
+        "iconPath": "image/mine_0.png",
+        "selectedIconPath":"image/mine_1.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
 }
