@@ -1,0 +1,13 @@
+<import src="../common/head.wxml" />
+<import src="../common/foot.wxml" />
+
+<view class="box6">
+
+<view >
+<image src="{{savedFilePath}}" mode="aspectFit" class="image"></image>
+<view class="p">{{poetry}}</view>
+</view>
+       <view class="box6_corner_lf"></view>
+       <view class="box6_corner_rt"></view>
+</view>
+<input value="想对我说什么？"/>

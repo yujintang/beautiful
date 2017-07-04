@@ -1,28 +1,18 @@
 <import src="../common/head.wxml" />
 <import src="../common/foot.wxml" />
 
-<view class="container">
+<view class="box6">
 
-  <view class="page-body">
-    <view class="page-section">
-      <view class="page-body-info">
-        <block wx:if="{{tempFilePath != ''}}">
-          <image src="{{tempFilePath}}" class="image" mode="aspectFit"></image>
-        </block>
-        <block wx:if="{{tempFilePath === '' && savedFilePath != ''}}">
-          <image src="{{savedFilePath}}" class="image" mode="aspectFit"></image>
-        </block>
-        <block wx:if="{{tempFilePath === '' && savedFilePath === ''}}">
-          <view class="image-plus-text" bindtap="chooseImage">请选择文件</view>
-        </block>
-      </view>
-      <view class="btn-area">
-        <button type="primary" bindtap="saveFile">保存文件</button>
-        <button bindtap="clear">删除文件</button>
-      </view>
-    </view>
-  </view>
-
-  <modal title="{{dialog.title}}" hidden="{{dialog.hidden}}" no-cancel bindconfirm="confirm">{{dialog.content}}</modal>
-
+<view catchtap='chooseImage'>
+<image src="{{savedFilePath}}" class="image" mode="aspectFit"></image>
+<view class="p">{{poetry}}</view>
 </view>
+       <view class="box6_corner_lf"></view>
+       <view class="box6_corner_rt"></view>
+</view>
+<view class="h1">温馨提示：点击照片，🉑进行️切换。👉👉 右上角分享！</view>
+<view class="input--haruki">
+<input placeholder-style="color:red" confirm-type="send"  svalue="想对我说什么？"/>
+</view>
+
+<modal title="{{dialog.title}}" hidden="{{dialog.hidden}}" no-cancel bindconfirm="confirm">{{dialog.content}}</modal>

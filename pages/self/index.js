@@ -3,8 +3,9 @@
 var app = getApp()
 Page({
   data: {
-    motto: '客服电话：110',
-    userInfo: {}
+    motto: '客服电话：',
+    userInfo: {},
+    phoneNumber: '17602108430'
   },
   //事件处理函数
   onLoad: function () {
@@ -17,5 +18,14 @@ Page({
         userInfo:userInfo
       })
     })
-  }
+  },
+    makePhoneCall: function () {
+        var that = this
+        wx.makePhoneCall({
+            phoneNumber: that.data.phoneNumber,
+            success: function () {
+                console.log("成功拨打电话")
+            }
+        })
+    }
 })

@@ -22,7 +22,7 @@ body {
     margin: 20px auto;
     width: 85%;
     min-height: 150px;
-    padding: 10px;
+    padding: 10rpx;
     position:relative;
     background: -webkit-gradient(linear, 0% 20%, 0% 92%, from(#fff), to(#f3f3f3), color-stop(.1,#fff));
     border-top: 1px solid #ccc;
@@ -105,17 +105,9 @@ body {
     text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.3);
     text-align: center;
 }
-.p1{
-    font-family: STXingkai;
-    margin-top: 64rpx;
-    text-align: justify;
-    font-weight: bold;
-    text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.3);
-    text-align: center;
-}
 
 .h1{
-    font-size: 24rpx;
+    font-size: 40rpx;
     font-weight: bold;
     margin-top: 5rpx;
     text-shadow: 1rpx 1rpx 3rpx rgba(0,0,0,0.3);
@@ -130,6 +122,9 @@ a{
 a:hover{
     text-decoration: underline;
     color: #6B6B6B !important ;
+}
+.input--haruki {
+    margin: 4em 1em 1em;
 }
 page{
       height: 100%;
