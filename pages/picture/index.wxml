@@ -10,9 +10,10 @@
        <view class="box6_corner_lf"></view>
        <view class="box6_corner_rt"></view>
 </view>
-<view class="h1">温馨提示：点击照片，🉑进行️切换。👉👉 右上角分享！</view>
-<view class="input--haruki">
-<input placeholder-style="color:red" confirm-type="send"  svalue="想对我说什么？"/>
+<view class="hh">温馨提示：点击照片，🉑进行️切换。👉👉 右上角分享！</view>
+<view class="input-v">
+<span>评论：</span>
+<input class="input-commit" placeholder-style="color:red; font-size: 24rpx" placeholder="您输入点什么吧～"/>
 </view>
 
 <modal title="{{dialog.title}}" hidden="{{dialog.hidden}}" no-cancel bindconfirm="confirm">{{dialog.content}}</modal>
