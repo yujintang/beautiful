@@ -49,5 +49,10 @@ Page({
                 })
             }
         })
+    },
+    sharePage: function () {
+        wx.navigateTo({
+            url: '/pages/picture/pages/share/share?id="123"'
+        })
     }
 })

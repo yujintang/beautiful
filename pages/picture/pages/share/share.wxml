@@ -1,13 +1,19 @@
-<import src="../common/head.wxml" />
-<import src="../common/foot.wxml" />
-
 <view class="box6">
 
 <view >
 <image src="{{savedFilePath}}" mode="aspectFit" class="image"></image>
 <view class="p">{{poetry}}</view>
 </view>
+       <block wx:for="{{barrageList}}" wx:key="id">
+        <text class="aon" style="-webkit-animation: commit-move {{item.time}}s linear 0s infinite, forwards;top:{{item.top}}%;color:{{item.color}}; left:100%">
+                          {{item.text}}
+                      </text>
+       </block>
        <view class="box6_corner_lf"></view>
        <view class="box6_corner_rt"></view>
 </view>
-<input value="想对我说什么？"/>
+
+<view class="input-v">
+<span>评论：</span>
+<input class="input-commit" placeholder-style="color:red; font-size: 24rpx" placeholder="{{placeholder}}" bindconfirm="changeName" value="{{inputValue}}"/>
+</view>

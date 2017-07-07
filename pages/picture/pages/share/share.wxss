@@ -133,3 +133,24 @@ page{
       align-items: center;
       justify-content: center;
 }
+.input-v{
+   display: flex;
+   flex-direction: row;
+   justify-content:flex-start;
+   align-items: center;
+   height: 100rpx;
+}
+.input-commit{
+  padding:5rpx;
+    border:2rpx solid #ccc;
+    -webkit-border-radius: 5rpx;
+    border-radius: 10rpx;
+}
+@keyframes commit-move{
+    from{left: 100%;}
+    to{left: -100%;}
+}
+.aon{
+position: absolute;
+white-space:nowrap;/* 防止向下换行*/
+}
