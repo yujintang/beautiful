@@ -3,12 +3,12 @@
 
 <view class="box6">
 
-<view catchtap='chooseImage'>
-<image src="{{savedFilePath}}" class="image" mode="aspectFit"></image>
-<view class="p">{{poetry}}</view>
-</view>
-       <view class="box6_corner_lf"></view>
-       <view class="box6_corner_rt"></view>
+  <view catchtap='chooseImage'>
+    <image src="{{savedFilePath}}" class="image" mode="aspectFit"></image>
+    <view class="p">{{poetry}}</view>
+  </view>
+  <view class="box6_corner_lf"></view>
+  <view class="box6_corner_rt"></view>
 </view>
 <view class="hh">温馨提示：点击照片，🉑进行️切换。👉👉 右上角分享！</view>
 <button catchtap='sharePage'>点我哦</button>

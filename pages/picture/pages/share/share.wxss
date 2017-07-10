@@ -144,7 +144,8 @@ page{
   padding:5rpx;
     border:2rpx solid #ccc;
     -webkit-border-radius: 5rpx;
-    border-radius: 10rpx;
+    border-radius: 12rpx;
+    font-size:30rpx;
 }
 @keyframes commit-move{
     from{left: 100%;}
