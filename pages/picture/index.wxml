@@ -11,5 +11,5 @@
   <view class="box6_corner_rt"></view>
 </view>
 <view class="hh">温馨提示：点击照片，🉑进行️切换。👉👉 右上角分享！</view>
-<button catchtap='sharePage'>点我哦</button>
+<button catchtap='sharePage'>点击测试</button>
 <modal title="{{dialog.title}}" hidden="{{dialog.hidden}}" no-cancel bindconfirm="confirm">{{dialog.content}}</modal>

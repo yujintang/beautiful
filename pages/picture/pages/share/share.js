@@ -1,7 +1,7 @@
 Page({
   onLoad: function () {
     this.setData({
-      savedFilePath: wx.getStorageSync('savedFilePath') || '../../image/8ea99a317e1ec430207b11db053290cb.png'
+      savedFilePath: wx.getStorageSync('savedFilePath') || '../../../image/camera.png'
     })
   },
   onShareAppMessage: function () {
@@ -21,16 +21,44 @@ Page({
       path: '/pages/picture/pages/share/share?id=100'
     },
     barrageList: [],
-    barrageDisplay:'inline',
+    barrageOpen:{
+          display: 'inline',
+          image: '/image/barrage_open.png'
+      },
+    barrageClose:{
+          display: 'none',
+          image: '/image/barrage_close.png'
+      },
+    barrageDefault:{
+        display: 'inline',
+        image: '/image/barrage_open.png'
+    },
+    flag: 0,
   },
   changeName: function (e) {
-    temp.push(new barrage(e.detail.value, Math.ceil(Math.random() * 84), Math.ceil(Math.random() * 5) + 2, getRandomColor()))
+    temp.push(new barrage(e.detail.value, Math.ceil(Math.random() * 84), Math.ceil(Math.random() * 10) + 2, getRandomColor()))
     this.setData({
       inputValue: '',
       barrageList: temp
-    })
-    console.log(this.data.barrageList)
+    });
   },
+  changeBarrageImage: function () {
+      let flag = (this.data.flag + 1 ) % 2;
+      let barrageDefault = void 0;
+      let that = this;
+      switch (flag){
+          case 1:
+              barrageDefault = that.data.barrageClose
+            break;
+          default:
+              barrageDefault = that.data.barrageOpen
+            break;
+      }
+      this.setData({
+          barrageDefault: barrageDefault,
+          flag: flag
+      })
+  }
 });
 let temp = [];
 class barrage {
@@ -40,7 +68,6 @@ class barrage {
     this.time = time;
     this.color = color;
     this.display = true;
-    let that = this;
     this.id = 'a' + Math.random() * 1000
   }
 }

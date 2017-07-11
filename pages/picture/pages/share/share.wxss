@@ -1,6 +1,10 @@
 .image {
   width: 100%;
 }
+.barrage-image {
+    width: 100%;
+    height: 100%;
+}
 .page-body-info {
   display: flex;
   box-sizing: border-box;
@@ -138,7 +142,11 @@ page{
    flex-direction: row;
    justify-content:flex-start;
    align-items: center;
-   height: 100rpx;
+   height: 80rpx;
+   width: 100%;
+   position: fixed;
+   bottom: 0;
+   background: #efefef
 }
 .input-commit{
   padding:5rpx;
@@ -146,6 +154,9 @@ page{
     -webkit-border-radius: 5rpx;
     border-radius: 12rpx;
     font-size:30rpx;
+    background: white;
+    padding-left: 12rpx;
+    width:64%;
 }
 @keyframes commit-move{
     from{left: 100%;}

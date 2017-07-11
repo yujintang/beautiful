@@ -1,5 +1,5 @@
 Page({
-    tempImage : '../../image/8ea99a317e1ec430207b11db053290cb.png',
+    tempImage : '../../image/camera.png',
     onLoad: function () {
         this.setData({
             savedFilePath: wx.getStorageSync('savedFilePath') || this.tempImage

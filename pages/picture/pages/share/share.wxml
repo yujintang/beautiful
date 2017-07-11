@@ -4,7 +4,7 @@
     <image src="{{savedFilePath}}" mode="aspectFit" class="image"></image>
     <view class="p">{{poetry}}</view>
     <block wx:for="{{barrageList}}" wx:key="id">
-      <text class="aon" style="-webkit-animation: commit-move {{item.time}}s linear 0s infinite, forwards;top:{{item.top}}%;color:{{item.color}};display:{{barrageDisplay}}left:100%;">
+      <text class="aon" style="-webkit-animation: commit-move {{item.time}}s linear 0s infinite, forwards;top:{{item.top}}%;color:{{item.color}};display:{{barrageDefault.display}};left:100%;">
         {{item.text}}
       </text>
     </block>
@@ -12,8 +12,12 @@
   <view class="box6_corner_lf"></view>
   <view class="box6_corner_rt"></view>
 </view>
-
 <view class="input-v">
-  <!--<span>评论：</span>-->
-  <input class="input-commit" placeholder-style="color:red; font-size: 24rpx" placeholder="{{placeholder}}" bindconfirm="changeName" value="{{inputValue}}" />
+<view catchtap='changeBarrageImage' style="width:80rpx; height:80rpx; position:absolute; right: 6%">
+                                        <image src="{{barrageDefault.image}}" mode="aspectFit" class="barrage-image"></image>
+  </view>
+  <view style="width:100%; height:100%;display:flex; align-items: center;justify-content: center;">
+   <!--<span>评论：</span>-->
+    <input class="input-commit" placeholder-style="color:#ccc; font-size: 24rpx" placeholder="{{placeholder}}" bindconfirm="changeName" value="{{inputValue}}" />
+  </view>
 </view>
