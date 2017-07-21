@@ -3,9 +3,9 @@
   <view style="position:relative; overflow:hidden">
     <image src="{{savedFilePath}}" mode="aspectFit" class="image"></image>
     <view class="p">{{poetry}}</view>
-    <block wx:for="{{barrageList}}" wx:key="id">
-      <text class="aon" style="-webkit-animation: commit-move {{item.time}}s linear 0s infinite, forwards;top:{{item.top}}%;color:{{item.color}};display:{{barrageDefault.display}};left:100%;">
-        {{item.text}}
+    <block wx:for="{{barrageList}}" wx:key="_id">
+      <text class="aon" style="-webkit-animation: commit-move {{item.desc.time}}s linear 0s infinite, forwards;top:{{item.desc.top}}%;color:{{item.desc.color}};display:{{barrageDefault.display}};left:100%;">
+        {{item.comment}}
       </text>
     </block>
   </view>
@@ -18,6 +18,6 @@
   </view>
   <view style="width:100%; height:100%;display:flex; align-items: center;justify-content: center;">
    <!--<span>评论：</span>-->
-    <input class="input-commit" placeholder-style="color:#ccc; font-size: 24rpx" placeholder="{{placeholder}}" bindconfirm="changeName" value="{{inputValue}}" />
+    <input class="input-commit" placeholder-style="color:#ccc; font-size: 24rpx" placeholder="{{placeholder}}" bindconfirm="submitComment" value="{{inputValue}}" />
   </view>
 </view>
