@@ -45,7 +45,7 @@ Page({
                                     success: function (res) {
                                         if (res.data.content) {
                                             that.setData({
-                                                poetry: res.data.content[0].content,
+                                                poetry: res.data.content[0] && res.data.content[0].content,
                                                 savedFilePath: savedFilePath
                                             }),
                                               that.saveShare()

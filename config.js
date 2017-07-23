@@ -3,7 +3,8 @@
  */
 'use strict';
 
-const host = 'http://127.0.0.1:2222';
+// const host = 'http://127.0.0.1:2222';
+const host = "https://www.7diary.com/btf_api";
 
 const config = {};
 
